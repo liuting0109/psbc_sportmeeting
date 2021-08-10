@@ -13,7 +13,13 @@ import org.springframework.web.bind.annotation.RestController;
  * @Description:
  */
 @Controller
+@RequestMapping("user")
 public class UserController {
+
+    @RequestMapping("/demotest")
+    public String demo(){
+        return "demo";
+    }
 
     @RequestMapping("/submit")
     public String registerByUser(HttpServletRequest request){
@@ -21,13 +27,14 @@ public class UserController {
     }
 
 
-    @ResponseBody()
+
+    @RequestMapping("/show")
     public String getUserInfo(HttpServletRequest request){
         String name = request.getParameter("username");
         String sex = request.getParameter("sex");
         System.out.println("userName is:" + name);
         System.out.println("userPwd is:" + sex);
-        return "success";
+        return name + sex;
     }
 
 }

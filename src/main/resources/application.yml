@@ -1,0 +1,29 @@
+server:
+  port: 9999
+  servlet:
+    context-path: /sportmeeting
+
+spring:
+  thymeleaf:
+    cache: false
+    prefix: /templates/
+    suffix: .html
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/sportmeeting?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.psbc.sportmeeting.entity
+
+#日志
+logging:
+  level:
+    root: info
+    com.psbc.sportmeeting: debug
