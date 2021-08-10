@@ -1,0 +1,56 @@
+
+
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Insert title here</title>
+</head>
+<body>
+
+<!-- action="${pageContext.request.contextPath}/user 相对路径 -->
+<form action="/submit" method="POST">
+    <div>
+        <label for="username">
+        姓名:
+        <input type="text" id="username" name="username"/>
+        </label>
+    </div>
+
+    <!-- label的作用是包含相关的文本框 -->
+    <div>
+        <label for="sex">
+            性别:
+            <input type="text" id="sex" name="sex"/>
+        </label>
+    </div>
+
+
+    <div>
+        <label for="tel">
+            手机号:
+            <input type="text" id="tel" name="tel"/>
+        </label>
+    </div>
+
+    <div>
+        <label for="skill">
+            特长:
+            <input type="text" id="skill" name="skill"/>
+        </label>
+    </div>
+
+
+    <div>
+        <label for="avatar">
+            头像:
+            <input type="text" id="avatar" name="avatar"/>
+        </label>
+    </div>
+
+    <div>
+        <button>提交</button>
+    </div>
+
+</form>
+</body>
+</html>
